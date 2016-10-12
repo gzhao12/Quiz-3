@@ -1,5 +1,7 @@
 package pkgMain;
 
+import exceptions.TriangleException;
+
 public abstract class GeometricObject {
   private String color = "white";
   private boolean filled;
@@ -49,8 +51,9 @@ public abstract class GeometricObject {
       " and filled: " + filled;
   }
 
-  /** Abstract method getArea */
-  public abstract double getArea();
+  /** Abstract method getArea 
+ * @throws TriangleException */
+  public abstract double getArea() throws TriangleException;
 
   /** Abstract method getPerimeter */
   public abstract double getPerimeter();
